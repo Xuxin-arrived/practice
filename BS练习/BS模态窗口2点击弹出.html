@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap/3.3.6/bootstrap.min.css">
+        <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $("#myModal").on("show.bs.modal",function(){
+                    alert("开始显示模态窗口");
+                });
+                $("#myModal").on("showen.bs.modal",function(){
+                    alert("显示模态窗口完毕");
+                });
+                $("#myModal").on("hide.bs.modal",function(){
+                    alert("开始隐藏模态窗口");
+                });
+                $("#myModal").on("hiden.bs.modal",function(){
+                    alert("隐藏模态窗口完毕");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button type = "button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">
+        点我显示弹窗
+        </button>
+        <div class="modal fade"  data-backdrop= "static"id = "myModal" tabindex="-1" aria-labelledby="myModal" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button"><span>×</span></button>
+                    <h4>提问</h4>
+                </div>
+                <div class="modal-body">
+                    <p>问题描述</p>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type ="button"><span>关闭</span></button>
+                    <button class="btn btn-primary" type="button">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

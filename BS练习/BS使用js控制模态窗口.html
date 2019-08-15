@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap/3.3.6/bootstrap.min.css">
+        <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $("#b1").click(function(){
+                    $("#myModal").modal('show');
+                });
+                $("#submit").click(function(){
+                    alert("信息已提交");
+                    $("#myModal").modal('hide');
+                });
+                $("#b3").click(function(){
+                    $("#myModal").modal('toggle');  
+                });
+            });
+        </script>
+    </head>
+    <body>
+       <button class = "btn btn-default" type="button" id="b1"><span>打开模态窗口</span></button> 
+       <button class = "btn btn-default" type="button" id="b2"><span>关闭模态窗口</span></button> 
+       <button class = "btn btn-default" type="button" id="b3"><span>切换模态窗口</span></button>
+       <div class="modal fade" id="myModal" tabindex="-1">
+       <div class="modal-dialog">
+            <div class="modal-content">
+                <div class= "modal-header">
+                    <button class="close" type="button" data-dismiss="modal"><span>×</span></button>
+                    <h4 class="modal-title">提问</h4>
+                </div>
+                <div class="modal-body">
+                    <p>问题描述</p>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

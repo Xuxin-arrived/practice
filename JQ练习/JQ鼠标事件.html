@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <script>
+        $(function(){
+            $("#mousedownup").mousedown(function(){
+                $(this).html("鼠标按下");
+            });
+            $("#mousedownup").mouseup(function(){
+                $(this).html("鼠标弹起");
+            });
+            var movenum = 0;
+            var enternum = 0;
+            var overnum = 0;
+            var leavenum = 0;
+            var outnum = 0;
+
+            $("#move").mousemove(function(){
+                $("#move span").html(++movenum);
+            });
+            $("#enter").mouseenter(function(){
+                $("#enter span").html(++enternum);
+            });
+            $("#over").mouseover(function(){
+                $("#over span").html(++overnum);
+            });
+            $("#leave").mouseleave(function(){
+                $("#leave span").html(++leavenum);
+            });
+            $("#out").mouseout(function(){
+                $("#out span").html(++outnum);
+            });
+
+            var enternum1=0;
+            var overnum1 = 0;
+            var leavenum1 = 0;
+            var outnum1 = 0;
+
+            $("#enter1").mouseenter(function(){
+                $("#enter1 span").html(++enternum1);
+            });
+            $("#over1").mouseover(function(){
+                $("#over1 span").html(++overnum1);
+            });
+            $("#leave1").mouseleave(function(){
+                $("#leave1 span").html(++leavenum1);
+            });
+            $("#out1").mouseout(function(){
+                $("#out1 span").html(++outnum1);
+            });
+        });       
+        </script>
+        <style>
+            table{
+                position: absolute;
+                left: 200px;
+                border-collapse : collapse;
+                table-layout : fixed;
+                height :100%;
+                width : 50%;
+            }
+            td{
+                border: 1px solid red;
+            }
+            .td1{
+                width: 25%;
+            }
+            div{
+                background-color: pink;
+                margin: 10px;
+                padding: 10px;
+            }
+            div#sonDiv{
+                background-color: cornflowerblue;
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr id = "tr0">
+                <td class = "td1">事件</td>
+                <td>效果演示></td>
+            </tr>
+            <tr id = "tr1">
+                <td>mousedown<br/>mouseup</td>
+                <td>
+                    <button id = "mousedownup">鼠标弹起</button>
+                </td>
+            </tr>
+            <tr id = "tr2">
+                <td class = "td1">mousemove<br/>mouseenter<br/>mouseover<br/>mouseleave<br/>mouseout</td>
+                <td><div id = "move">mousemove 当鼠标进入元素，每移动一下都会被调用 次数<span>0</span></div>
+                    <div id = "enter">mouseenter 当鼠标进入元素，调用一下，在其中移动，不调用 次数<span>0</span></div>
+                    <div id = "over">mouseover 当鼠标进入元素，调用一下，在其中移动，不调用 次数<span>0</span></div>
+                    <div id = "leave">mouseleave 当鼠标离开元素，调用一下 次数<span>0</span></div>
+                    <div id = "out">mouseout 当鼠标离开元素，调用一下<span>0</span></div>
+                 </td>
+            </tr>
+            <tr id = "tr3">
+                <td class = "td1">mouseover<br/>mouseenter</td>
+                <td><div id = "enter1">mouseenter 经过其子元素不会被调用 次数<span>0</span>
+                        <div id = "sonDiv">div中的子元素</div>
+                    </div>
+                    <div id = "over1">mouseover 经过其子元素会被调用 次数><span>0</span>
+                            <div id = "sonDiv">div中的子元素</div>
+                    </div</td>
+            </tr>
+            <tr id = "tr4">
+                <td class = "td1">mouseleave<br/>mouseout</td>
+                <td><div id = "leave1">mouseenter 经过其子元素不会被调用 次数<span>0</span>
+                        <div id = "sonDiv">div中的子元素</div>
+                    </div>
+                    <div id = "out1">mouseout 经过其子元素会被调用 次数<span>0</span>
+                            <div id = "sonDiv">div中的子元素</div>
+                    </div></td>
+            </tr>
+        </table>
+    </body>
+</html>

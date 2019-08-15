@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src = "jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap/3.3.6/bootstrap.min.css">
+        <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+        <style>
+            body{
+                position:absolute;
+                padding-left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style = "height: 300px"></div>
+        <div class = "dropup">
+            <button class = "btn dropdown-toggle btn-primary" id = "dropdownMenu1" data-toggle="dropdown">
+                192.168.1.2<span class="caret"></span>
+            </button>
+            <ul class = "dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation" class="dropdown-header">这是上  面选项的标题（不可选中）</li>
+                <li role="presentation">
+                    <a href="#">HTML</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">CSS</a>
+                </li>
+                <li role="presentation" class = "divider"></li>
+                <li role="presentation" class="dropdown-header">这是下面选项的标题（不可选中）</li>
+                <!-- <li role="presentation" class = "disabled">保留选项不可以选</li> -->
+                <li role="presentation">
+                        <a href="#">JavaScript</a>
+                    </li>
+                <li class = "disabled"><a href="#" tabindex="-1">保留选项不可以选</a></li>
+                <li role="presentation">
+                        <a href="#">AJAX</a>
+                </li>
+                <li role="presentation" class="disabled"><a href="#">保留选项不可以选</a></li>
+            </ul>
+        </div>
+        <div style = "height: 100px"></div>
+    </body>
+</html>

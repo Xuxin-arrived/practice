@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            var font = new Array(5);
+            for(var i = 0 ; i < 5 ; i++)
+            {
+                font[i] = new Array(4);
+            }
+            font[0] = ["id", "名称","血量","伤害"];
+            font[1] = [1,"gareen",340,58];
+            font[2] = [2,"teemo",320,"76"];
+            font[3] = [3,"annie",380,38];
+            font[4] = [4,"deadbrother",400,90];
+        document.write("<table>");
+            for(var i = 0; i < 5 ; i++)
+            {
+                document.write("<tr>");
+                for(var j = 0; j < 4 ; j ++)
+                {
+                    document.write("<td>" + font[i][j]+"</td>") ;
+                    document.getElementsByTagName("td")[j].style.width = "125px";
+ 
+                }
+                document.write("</tr>")
+            }
+        document.write("</table>");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#fff";
+        document.getElementsByTagName("table")[0].style.width = "500px";
+        document.getElementsByTagName("table")[0].style.height = "205px";
+        document.getElementsByTagName("table")[0].style.borderCollapse = "collapse";
+        for(var i = 0 ; i < 5 ; i ++)
+        {
+            document.getElementsByTagName("tr")[i].style.borderBottom = "1px solid #D3D3D3";
+            document.getElementsByTagName("tr")[i].style.width = "500px";
+            document.getElementsByTagName("tr")[i].style.height = "40px";
+            document.getElementsByTagName("tr")[i].style.textAlign = "center";
+            if( i == 1 || i == 3)
+            {
+                document.getElementsByTagName("tr")[i].style.backgroundColor = "#F8F8F8"
+            }
+        }
+    </script>
+</body>
+</html>

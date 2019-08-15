@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+</head>
+<body>
+<form action = "http://www.baidu.com" onsubmit = "return checkout()">
+	账号:<input type = "text" id  = "username"><br/>
+	密码:<input type = "password" id = "password"><br/>
+	年龄:<input type = "text" id = "age"><br/>
+	邮箱:<input type = "text" id = "emailAddress"><br/>
+	<input type = "submit" value = "注册">
+	</form>
+	<script>
+	//function checkout(){
+		//var username = document.getElementById("username").value;
+		//var password =document.getElementById("password").value;
+		//if(username.length == 0){
+			//alert("用户名不能为空");
+			//return false;
+		//}else if(password.length == 0){
+			//alert("密码不能为空");
+			//return false;
+		//}else{
+			//return true;
+		
+		//}
+	//}
+
+	function checkout(){
+		var username = document.getElementById("username").value;
+		if(username.length==0){
+			alert("用户名不能为空！")
+			return false;
+		}else if(username.length<3){
+			alert("用户名不能小于3位！");
+			return false;
+		}else{
+			var age = document.getElementById("age").value;
+			var reg = /^[0-9]+.?[0-9]*/;
+				if(!reg.test(age)){
+					alert("年龄必须为数字！");
+					return false;
+				}else{
+					if(String(age).indexOf(".")>-1){
+						alert("年龄必须为整数！")
+						return false;
+					}else{
+						var email = document.getElementById("emailAddress").value;
+						var reg2 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+						if(!reg2.test(email)){
+							alert("邮箱格式不符合规范！")
+							return false;
+						}else{
+							return true;
+						}
+					}
+			}	
+		}
+	}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src = "jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#input1").blur(function(){
+                    //var text = $("#input1").val();
+                    $("#showDiv").html("文本框失去焦点后出发内容改变事件，文本框的内容变成："+$("#input1").val());
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id = "showDiv"></div>
+        <input id = "input1"type="text"><br/>
+        <input type="text" value = "只有当input1失去焦点后才能触发内容改变事件" size = "50px">
+    </body>
+</html>

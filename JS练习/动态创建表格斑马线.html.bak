@@ -1,0 +1,71 @@
+<html>
+<head>
+	<style>
+	
+	#d{
+		padding-left:80px;
+		width:100%;
+		border:1px solid  red;
+	}
+	table{
+		width:80%;
+		text-align:center;
+		border-collapse:collapse;
+	}
+	tr{
+		height:80px;
+		border-bottom:2px solid lightGray;
+	}
+	tr.h{
+		
+	}
+	tr.o{
+  background-color:#D2E9FF;
+}
+	tr.e{
+  background-color:#F0F;
+}
+	
+	</style>
+
+</head>
+<body>
+<div id = "d"></div>
+</body>
+<script>
+	var texts1=new Array("id","名称","血量","伤害");
+  	var texts2=new Array("1","gareen","340","58");
+ 	var texts3=new Array("2","teemo","320","76");
+ 	var texts4=new Array("3","annie","380","38");
+	var texts5=new Array("4","deadbrother","400","90");
+	var textss = new Array(texts1,texts2,texts3,texts4,texts5);
+	var table = document.createElement("table");
+	for(var i = 0;i<textss.length;i++){
+		var tr = document.createElement("tr");
+		
+		for(var j=0;j<textss[i].length;j++){
+			var td = document.createElement("td");
+			var value = document.createTextNode(textss[i][j]);
+			td.appendChild(value);
+			tr.appendChild(td);
+		}
+		table.appendChild(tr);
+	}
+	
+//	for(var i =0;i<tr.length)
+	
+	var div = document.getElementById("d");
+	div.appendChild(table);
+	var tr = document.getElementsByTagName("tr");
+	for(var i =0;i<tr.length;i++){
+		 if(i==0){
+        tr[i].className="h";
+      }else if(i%2!=0){
+        tr[i].className="o";
+      }else{
+        tr[i].className="e";
+      }
+	}
+	
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <script src = "jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#b").click(function(){
+			$("#d").addClass("pink");
+		});
+	});
+</script>
+<style type="text/css">
+	.pink{
+		background-color : pink;	
+	}
+</style>
+ </head>
+ <body>
+	<input type="button" id = "b" value="点我设置文字背景色">
+	<div id="d" class="">
+		这是一段文字
+	</div>
+ </body>
+
+</html>

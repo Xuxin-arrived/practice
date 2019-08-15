@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+</head>
+<body>
+<table id = "parentTable">
+<tbody id = "tbody">
+	<tr>
+		<td>英雄名称</td>
+		<td>操作</td>
+	</tr>
+	<tr>
+		<td>盖伦</td>
+		<td><button onclick = "dosothg(this)">删除</button></td>
+	</tr>
+	<tr>
+		<td>提莫</td>
+		<td><button onclick = "dosothg(this)">删除</button></td>
+	</tr>
+	<tr>
+		<td>祈求者</td>
+		<td><button onclick = "dosothg(this)">删除</button></td>
+	</tr>
+	</tbody>
+</table>
+<script>
+	function dosothg(someoneTb){
+		var tips = confirm("确定要删除？");
+		var pt = document.getElementById("tbody");
+		if(tips == true){
+			pt.removeChild(someoneTb.parentNode.parentNode);
+		}
+	}
+</script>
+
+</body>
+</html>

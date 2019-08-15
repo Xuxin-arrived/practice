@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<button onclick = "show()">显示这个div</button>
+	<button onclick = "hide()">隐藏这个div</button>
+	<div id="d" >
+		这是一个div
+	</div>
+	<script>
+		function show(){
+			var d1 = document.getElementById(d);
+			d1.style.display = "block";
+		}
+		function hide(){
+			var d1 = document.getElementById(d);
+			d1.style.display = "none";
+		}
+	</script>
+ </body>
+</html>
